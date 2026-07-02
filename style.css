@@ -1,0 +1,257 @@
+/* Resetting basic margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff9f9;
+    color: #4a3b32;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffe4e1;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d15b74;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a3b32;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(255,240,240,0.7), rgba(255,240,240,0.7)), url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    color: #d15b74;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #d15b74;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #b0435b;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #4a3b32;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Improvements */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.badge {
+    background-color: #fce4ec;
+    color: #c2185b;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-transform: uppercase;
+}
+
+.card-img {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #d15b74;
+}
+
+.card p {
+    font-size: 14px;
+    color: #776255;
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a3b32;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #ffb6c1;
+    color: #4a3b32;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d15b74;
+    color: white;
+}
+
+/* --- Cart Sidebar Layout --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Hidden initially */
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+}
+
+/* dynamic class toggled via JS */
+.cart-sidebar.open {
+    right: 0; 
+}
+
+.cart-header {
+    padding: 20px;
+    background-color: #ffe4e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #d15b74;
+}
+
+.cart-items {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #999;
+    margin-top: 30px;
+}
+
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-footer {
+    padding: 20px;
+    background-color: #fff0f0;
+    border-top: 1px solid #ffe4e1;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #d15b74;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #b0435b;
+}

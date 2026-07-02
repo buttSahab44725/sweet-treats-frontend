@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats | Dessert Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">🍰 SweetTreats</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" onclick="scrollToSection('hero')">Home</a></li>
+                <li><a href="#" onclick="scrollToSection('menu')">Menu</a></li>
+                <li><a href="#" id="cart-nav-btn">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Life is short, make it sweet!</h1>
+            <p>Freshly baked daily with love and the finest ingredients.</p>
+            <button class="btn" onclick="scrollToSection('menu')">Explore Menu</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="menu-section" id="menu">
+        <h2>Our Sweet Menu</h2>
+        <div class="grid-container">
+            <!-- Card 1 -->
+            <div class="card" data-category="cupcake">
+                <div class="card-img">🧁</div>
+                <span class="badge">Cupcake</span>
+                <h3>Strawberry Cupcake</h3>
+                <p>Soft vanilla base with creamy strawberry frosting.</p>
+                <div class="price">Rs. 250</div>
+                <button class="add-to-cart-btn" onclick="addToCart('Strawberry Cupcake', 250)">Add to Cart</button>
+            </div>
+            <!-- Card 2 -->
+            <div class="card" data-category="donut">
+                <div class="card-img">🍩</div>
+                <span class="badge">Donut</span>
+                <h3>Glazed Donut</h3>
+                <p>Classic melt-in-your-mouth chocolate glazed donut.</p>
+                <div class="price">Rs. 180</div>
+                <button class="add-to-cart-btn" onclick="addToCart('Glazed Donut', 180)">Add to Cart</button>
+            </div>
+            <!-- Card 3 -->
+            <div class="card" data-category="cake">
+                <div class="card-img">🍰</div>
+                <span class="badge">Cake</span>
+                <h3>Red Velvet Slice</h3>
+                <p>Rich red velvet cake layered with cream cheese.</p>
+                <div class="price">Rs. 350</div>
+                <button class="add-to-cart-btn" onclick="addToCart('Red Velvet Slice', 350)">Add to Cart</button>
+            </div>
+            <!-- Card 4 -->
+            <div class="card" data-category="brownie">
+    <div class="card-img">🍫</div>
+    <span class="badge">Brownie</span>
+    <h3>Fudge Brownie</h3>
+    <p>Rich, gooey chocolate brownie topped with warm ganache.</p>
+    <div class="price">Rs. 220</div>
+    <button class="add-to-cart-btn" onclick="addToCart('Fudge Brownie', 220)">Add to Cart</button>
+</div>
+            <!-- Card 5-->
+            <div class="card" data-category="mithai">
+    <div class="card-img">🧆</div>
+    <span class="badge">Mithai</span>
+    <h3>Motichoor Laddoo</h3>
+    <p>Pure desi ghee laddoos, perfect for celebrating sweet moments.</p>
+    <div class="price">Rs. 300</div>
+    <button class="add-to-cart-btn" onclick="addToCart('Motichoor Laddoo', 300)">Add to Cart</button>
+</div>
+            <!-- Card 6 -->
+           <div class="card" data-category="cake">
+    <div class="card-img">🍰</div>
+    <span class="badge">Cake</span>
+    <h3>Lotus Cheesecake</h3>
+    <p>Creamy cheesecake with a thick Lotus Biscoff crust.</p>
+    <div class="price">Rs. 450</div>
+    <button class="add-to-cart-btn" onclick="addToCart('Lotus Cheesecake', 450)">Add to Cart</button>
+</div>
+<div class="card" data-category="mithai">
+    <div class="card-img">🥣</div>
+    <span class="badge">Mithai</span>
+    <h3>Creamy Rasmalai</h3>
+    <p>Soft milk patties dipped in rich, saffron-infused condensed milk.</p>
+    <div class="price">Rs. 280</div>
+    <button class="add-to-cart-btn" onclick="addToCart('Creamy Rasmalai', 280)">Add to Cart</button>
+</div>
+<div class="card" data-category="tart">
+    <div class="card-img">🥭</div>
+    <span class="badge">Tart</span>
+    <h3>Mango Custard Tart</h3>
+    <p>Crispy buttery shell filled with rich custard and fresh mangoes.</p>
+    <div class="price">Rs. 320</div>
+    <button class="add-to-cart-btn" onclick="addToCart('Mango Custard Tart', 320)">Add to Cart</button>
+</div>
+        </div>
+    </section>
+
+    <!-- Slide-out Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Cart 🛒</h3>
+            <button class="close-btn" id="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items JS se dynamic add honge yahan -->
+            <p class="empty-msg">Your cart is empty!</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-section">
+                <span>Total:</span>
+                <span id="cart-total">Rs. 0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
